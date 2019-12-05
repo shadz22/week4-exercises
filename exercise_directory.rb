@@ -11,13 +11,14 @@ def input_student
     country = gets.chomp
     puts "Please choose your cohort"
     cohort = gets.chomp.to_sym
+    cohort = :November if cohort.empty? 
     # add the student hash to the array
     students << {name: name, country: country, cohort: cohort}
     puts "Now we have #{students.count} students"
     # get another name from the user
     puts "Please enter the name of another student"
     name = gets.chomp
-
+   
   end
   # return the array of students
   students
